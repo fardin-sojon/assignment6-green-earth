@@ -40,7 +40,7 @@ const displayCard = (cards)=>{
         // console.log(card);
         const cardDiv = document.createElement("div");
         cardDiv.innerHTML=`
-            <div class="bg-white p-5 space-y-3">
+            <div class="bg-white p-5 space-y-3 rounded-xl">
               <img class="h-100 w-full" src="${card.image}" alt="" />
               <h3 class="text-lg font-bold">${card.name}</h3>
               <p>${card.description}</p>
