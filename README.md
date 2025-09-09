@@ -1,167 +1,32 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-006
-
-### 📅 Deadline For 60 marks: 9th September, 2025 (11:59 pm ⏱️)
-
-### 📅 Deadline For 50 marks : 13th September , 2025 (6:00 pm⏱️)
-
-### 📅 Deadline For 30 marks: Any time after 13the September , 2025 (6:01 pm⏱️).
-
----
-# Green Earth
-
-
-## Private Repository: https://classroom.github.com/a/nVZrg5R9 
-
-## Alternative Private Repository: https://classroom.github.com/a/KCGI14ST 
-
-
----
-🌴 API Endpoints
----
-1. Get 🌴All Plants
-```bash
-https://openapi.programming-hero.com/api/plants
-```
-
-2. Get 🌴All categories <br/>
-```bash
-https://openapi.programming-hero.com/api/categories
-```
-
-
-3. Get 🌴plants by categories <br/>
-```bash
-https://openapi.programming-hero.com/api/category/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/category/1
-```
-
-4. Get 🌴Plants Detail <br/>
-
-```bash
-https://openapi.programming-hero.com/api/plant/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/plant/1
-```
----
-
-
-
-
-## ✅ Main Requirements 
-
-#### 1) Navbar
-
-- Website **logo/name** on the **left**  
-- **Menu items** in the **center** 
-- **Plant a Tree button** on the **right** 
-
-#### 2) Banner 
-- A **background image**  
-- A **title** and **subtitle**  
-- A **centered button**  
-
-#### 3) About Campaign
-- **Section heading**  
-- **Image on the left**, **text on the right**  
-
-#### 4) Our Impact Section 
-- Show **3 cards** with campaign **statistics**  
-
-#### 5) Plant a Tree Today Section & Footer
-- **Form**: Name, Email, Number of Trees  
-- **Footer** with copyright info 
-
-#### 6) Responsiveness 
-- Website must be **mobile responsive**  
-
----
-#### 7) Create a README file to answer the following question-
-
-
-#### 1) What is the difference between var, let, and const?
-
-#### 2) What is the difference between map(), forEach(), and filter()? 
-
-#### 3) What are arrow functions in ES6?
-
-#### 4) How does destructuring assignment work in ES6?
-
-#### 5) Explain template literals in ES6. How are they different from string concatenation?
-
-## ⚙️ Functionalities 
-
-1) Category Loading 
-Load Tree Categories dynamically on the left side.
-
-2) Category Click → Tree Data 
-On clicking a category: load trees of that category.
-
-Display in a 3-column card layout.
-
-3) Card Contents 
- Each card includes:
-
-        - Image
-
-        -  Name
-
-        - Short description
-
-        - Category
-
-        - Price
-
-        - Add to Cart button
-
-4) Modal on Card Click 
-Clicking a tree name on a card opens a modal with full tree details.
-
-
-##  🧪 Challenges 
-
-
-    1) Add to Cart 
-    Clicking Add to Cart: - Adds the tree to Cart List
-                          - Shows tree name 
-
-    2) Total Calculation 
-    Calculate total price of trees in cart.
-
-    3) Remove from Cart 
-    Clicking ❌ removes tree and deducts price from total.
-
-    4) Loading Spinner
-    Show spinner while data is loading.
-
-    5) Active Button State 
-    Highlight active category button when selected.
-
-
-
-🧰 Technology Stack:
-        
-        HTML
-
-        CSS (Vanilla / Tailwind / DaisyUI)
-
-        JavaScript (Vanilla only, no frameworks)
-
-📌 Rules
-✅ At least 5 meaningful commits
-
-❌ No dummy text or Lorem Ipsum — must use relevant content
-
-
-
-
-
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE  
-- **GitHub Private Repository:** YOUR_REPO_URL_HERE  
-
----
+### 6. Create a README file to answer the following question:
+
+1. What is the difference between **var, let, and const**? <br>
+Answer: 
+- **var**: Function-স্কোপ (বা global), কোনো block এর ভিতরে থাকলেও বাইরে অ্যাক্সেস করা যায়, redeclare করতে পারা যায়।
+- **let**: Block-স্কোপ, same নাম redeclare করা যায় না, তবে মান পরিবর্তন করা যায়।
+- **const**: Block-স্কোপ, redeclare বা reassign করা যায় না—তবে object বা array এর ভেতরের data পরিবর্তন করা যায়।
+
+2. What is the difference between **map(), forEach(), and filter()**? <br>
+Answer:
+- **forEach()**: প্রতিটি item-এর জন্য callback চলে কিন্তু কিছু return করে না (return undefined)—side effects এর জন্য ভালো।
+- **map()**: প্রতিটি item transform করে একটা নতুন array return করে।
+- **filter()**: condition অনুযায়ী items ফিল্টার করে একটি নতুন array return করে।
+
+3. What are arrow functions in **ES6**? <br>
+Answer:
+- **ES6**-এ নতুনভাবে পরিচিত একটি ফাংশন লেখার পদ্ধতি যা => দিয়ে চিহ্নিত হয়। এটি সাধারণ ফাংশনের তুলনায় আরও সংক্ষিপ্ত ও পরিষ্কার। 
+- উদাহরণ: const add = (a, b) => a + b;
+4. How does **destructuring assignment** work in **ES6**? <br>
+Answer:
+- **ES6**-এ **Destructuring Assignment** হলো একটি নতুন সিনট্যাক্স যা দিয়ে অ্যারে বা অবজেক্টের মানগুলোকে সরাসরি ভেরিয়েবলে অ্যাসাইন করা যায়। এটি কোডকে আরও সংক্ষিপ্ত, পরিষ্কার এবং পড়তে সহজ করে তোলে।
+
+5. Explain **template literals** in **ES6**. How are they different from **string concatenation**? <br>
+Answer:
+- **Template Literals** হলো স্ট্রিং ডিফাইন করার একটি নতুন সিনট্যাক্স, যা ব্যাকটিক (`) চিহ্ন দিয়ে ঘেরা থাকে। এতে ${} দিয়ে এক্সপ্রেশন বা ভেরিয়েবল ইনসার্ট করা যায়।
+- **String Concatenation** হলো দুটি বা তার বেশি স্ট্রিংকে একত্রিত করে একটি নতুন স্ট্রিং তৈরি করার প্রক্রিয়া। এটি সাধারণত ডাইনামিক টেক্সট তৈরি, ব্যবহারকারীর ইনপুট প্রসেসিং, অথবা ইউজার ইন্টারফেসে মেসেজ প্রদর্শনের জন্য ব্যবহৃত হয়।
+
+##
+- [🌐 **Live Link**](https://fardin-sojon.github.io/assignment6-green-earth/)
+
+
+# Let's Code and Achieve your Dream 🎯

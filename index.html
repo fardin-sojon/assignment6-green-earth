@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment-6</title>
     <link rel="stylesheet" href="./Style/style.css" />
-    <link rel="shortcut icon" href="./assets/logo-tree.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/logo-tree.png"
+      type="image/x-icon"
+    />
     <!-- Tailwind & Daisy UI CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -56,7 +60,7 @@
                 <li><a>Plant a Tree</a></li>
               </ul>
             </div>
-            <img class="h-10 mr-2" src="./assets/logo-tree.png" alt="">
+            <img class="h-10 mr-2" src="./assets/logo-tree.png" alt="" />
             <h1 class="text-xl text-white font-bold">Green Earth</h1>
           </div>
           <div class="navbar-center hidden lg:flex">
@@ -83,7 +87,8 @@
             for future generations.
           </p>
           <button
-            class="btn rounded-3xl text-lg text-[#15803D] bg-[#facc15] py-6 border-none">
+            class="btn rounded-3xl text-lg text-[#15803D] bg-[#facc15] py-6 border-none"
+          >
             Get Involved
           </button>
         </div>
@@ -97,35 +102,40 @@
       </h3>
       <section class="w-11/12 mx-auto grid gap-7 grid-cols-12">
         <!-- Left Side -->
-        <aside class="col-span-2 space-y-2 py-2">
+        <aside class="col-span-2 space-y-2 py-2 max-sm:col-span-4 max-sm:order-2">
           <h3 class="text-xl font-bold">Categories</h3>
-          <button
-            class="hover:bg-[#15803D] hover:text-white p-2 rounded-md w-full text-left"
-          >
+          <button id="allcards"
+            onclick="allLoadCard()"
+            class="hover:bg-[#15803D] hover:text-white p-2 rounded-md w-full text-left">
             All Trees
           </button>
-          <div id="categories-container" class=""></div>
+          <div id="categories-container" class="space-y-2"></div>
         </aside>
         <!-- Center -->
-        <section class="col-span-8">
-          <div id="card-container" class="grid grid-cols-3 gap-5"></div>
+        <section class="col-span-8 max-sm:col-span-8 max-sm:order-2">
+          <!-- Spinner -->
+          <section
+            id="spinner"
+            class="flex justify-center items-center py-10 hidden"
+          >
+            <span class="loading loading-bars loading-xl"></span>
+          </section>
+          <!-- Card -->
+          <div
+            id="card-container"
+            class="grid grid-cols-1 md:grid-cols-3 gap-5"
+          ></div>
         </section>
         <!-- Right Side -->
-        <aside class="col-span-2 bg-white rounded-xl p-4 h-300">
+        <aside class="col-span-2 bg-white rounded-xl p-4 max-sm:col-span-12 max-sm:order-1">
           <h2 class="text-2xl font-bold">Your Cart</h2>
-          <div
-            class="flex gap-5 justify-between items-center bg-[#F0FDF4] p-3 mt-3"
-          >
-            <div>
-              <h3 class="mb-1">Mango Tree</h3>
-              <p>৳<span>500 x 1</span></p>
+
+          <div id="cart-container" class="max-sm:order-3"></div>
+          
+            <div class="flex justify-between items-center mt-3">
+              <h2 class="font-bold">Total:</h2>
+              <p class="font-bold">৳<span id="total">0</span></p>
             </div>
-            <span class="">❌</span>
-          </div>
-          <div class="flex justify-between items-center mt-3">
-            <h2 class="font-bold">Total:</h2>
-            <p class="font-bold">৳<span>1000</span></p>
-          </div>
         </aside>
       </section>
       <!-- About the Campaign -->
@@ -179,10 +189,10 @@
         <h3 class="text-3xl text-center font-semibold mb-7 text-white">
           Plant a Tree Today
         </h3>
-        <div class="bg-[#15803d] w-[650px] mx-auto p-10 rounded-xl">
+        <div class="bg-[#15803d] w-full md:w-[650px] mx-auto p-10 rounded-xl">
           <form action="" class="">
             <input
-              class="bg-white rounded-sm w-[570px] mt-2 p-3 border-none"
+              class="bg-white rounded-sm w-full mt-2 p-3 border-none"
               type="text"
               placeholder="Your Name"
             /><br />
@@ -192,14 +202,16 @@
               placeholder="Your Email Adress"
             />
             <select
-              class="select bg-white rounded-sm w-full h-12 mt-2 p-3 border-none">
+              class="select bg-white rounded-sm w-full h-12 mt-2 p-3 border-none"
+            >
               <option disabled selected>Number of Trees</option>
               <option>1 Trees - $5</option>
               <option>5 Trees - $25</option>
               <option>10 Trees - $50</option>
             </select>
             <button
-              class="rounded-full cursor-pointer w-full mt-4 p-3 bg-[#FACC15] border-none text-[#15803D]">
+              class="rounded-full cursor-pointer w-full mt-4 p-3 bg-[#FACC15] border-none text-[#15803D]"
+            >
               <a>Donate Now</a>
             </button>
           </form>
@@ -211,6 +223,24 @@
           © 2025 Green Earth. All Rights Reserved.
         </p>
       </div>
+
+      <!-- Modal -->
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+      <dialog
+        id="card_details_modal"
+        class="modal modal-bottom sm:modal-middle"
+      >
+        <div class="modal-box">
+          <div id="details-container" class=""></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </footer>
     <script src="./JS/script.js"></script>
   </body>
